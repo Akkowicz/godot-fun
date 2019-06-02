@@ -6,3 +6,6 @@ export_presets.cfg
 
 # Mono-specific ignores
 .mono/
+dodge_tutorial/Exported/dodge.exe
+dodge_tutorial/Exported/dodge.pck
+dodge_tutorial/Exported/Dodge_v1.zip
