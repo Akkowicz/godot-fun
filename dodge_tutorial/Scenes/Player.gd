@@ -33,13 +33,15 @@ func _process(delta):
     position.x = clamp(position.x, 0, screen_size.x)
     position.y = clamp(position.y, 0, screen_size.y)
     # Swap animations based on velocity
-    if velocity.x != 0:
+    if velocity.x != 0 and velocity.y != 0:
         $AnimatedSprite.animation = "right"
-        $AnimatedSprite.flip_v = velocity.y > 0
         $AnimatedSprite.flip_h = velocity.x < 0
+        $AnimatedSprite.flip_v = velocity.y > 0
     elif velocity.y != 0:
         $AnimatedSprite.animation = "up"
         $AnimatedSprite.flip_v = velocity.y > 0
+    elif velocity.x != 0:
+        $AnimatedSprite.animation = "right"
         $AnimatedSprite.flip_h = velocity.x < 0
     
 
